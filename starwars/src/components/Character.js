@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import styled from 'styled-components'
+
+const Headline = styled.h2`
+    color: dodgerblue;
+    border: 1px solid black;
+`
+
 // Write your Character component here
 
 
@@ -11,12 +18,7 @@ const Character = (props) => {
     const [name, setName] = useState([]);
     return (
         <div className="characters">
-            <h2
-
-            style={{ fontSize: "12px"}, {color: "white"}}
-            
-
-            >{props.characterList.name}</h2>
+            <Headline>{props.characterList.name}</Headline>
         </div>
     )
 }
